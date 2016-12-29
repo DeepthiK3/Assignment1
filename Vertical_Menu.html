@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html>
+<head>
+<style>
+ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    width: 200px;
+    background-color: white;
+    border: 1px solid green;
+}
+
+li {
+    text-align: center;
+}
+
+li a {
+    display: block;
+    color: black;
+    padding: 8px ;
+    text-decoration: none;
+}
+
+li a.active {
+    background-color: rgb(76, 175, 80);
+    color: red;
+}
+
+li a:hover:not(.active) {
+    background-color: #555;
+    color: blue;
+}
+</style>
+<title>
+Vertical Menu
+</title>
+</head>
+<body>
+
+<ul>
+  <li><a class="active"  href="#">Home</a></li>
+  <li><a href="#">News</a></li>
+  <li><a href="#">About us</a></li>
+  <li><a href="#">Reference</a></li>
+  <li><a href="#">Gallery</a></li>
+  <li><a href="#">Contact us</a></li>
+</ul>
+
+</body>
+</html>

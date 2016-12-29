@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html>
+<head>
+<style>
+button.accordion {
+    background-color: light grey;
+    color: black;
+    cursor: pointer;
+    padding: 22px;
+    width: 100%;
+    border: none;
+    text-align: left;
+    outline: none;
+    font-size: 18px;
+    transition: 0.4s;
+}
+
+button.accordion.active, button.accordion:hover {
+    background-color: grey; 
+}
+
+div.panel {
+    padding: 18px;
+    display: none;
+    background-color: white;
+}
+
+div.panel.show {
+    display: block;
+}
+</style>
+<title>
+Accordion
+</title>
+</head>
+<body>
+
+<h2>Accordion</h2>
+
+<button class="accordion">HTML</button>
+<div class="panel">
+  <p>HTML (Hypertext Markup Language) is the set of markup symbols or codes inserted in a file intended for display on a World Wide Web browser page. The markup tells the Web browser how to display a Web page's words and images for the user. Each individual markup code is referred to as an element (but many people also refer to it as a tag). Some elements come in pairs that indicate when some display effect is to begin and when it is to end.</p>
+</div>
+
+<button class="accordion">CSS</button>
+<div class="panel">
+  <p>The Cascading Style Sheets Specification ( CSS ) is a computer language that is used to write formatting instructions ( rules ). These rules tell a web browser how webpage content should 'look'— in terms of: layout. position, alignment, width, height, etc.</p>
+</div>
+
+<button class="accordion">JavaScript</button>
+<div class="panel">
+  <p>JavaScript is a client-side scripting language, which means the source code is processed by the client's web browser rather than on the web server. This means JavaScript functions can run after a webpage has loaded without communicating with the server. For example, a JavaScript function may check a web form before it is submitted to make sure all the required fields have been filled out. The JavaScript code can produce an error message before any information is actually transmitted to the server.</p>
+</div>
+
+<script>
+var acc = document.getElementsByClassName("accordion");
+var i;
+
+for (i = 0; i < acc.length; i++) {
+    acc[i].onclick = function(){
+        this.classList.toggle("active");
+        this.nextElementSibling.classList.toggle("show");
+  }
+}
+</script>
+
+</body>
+</html>
